@@ -16,7 +16,7 @@ pub fn urlify(s: &str) -> String {
         }
     }
 
-    let mut result: String = String::with_capacity(max_index + space_count * 2);
+    let mut result: String = String::with_capacity(s[..max_index].len() + space_count * 2);
 
     for c in s[..max_index].chars(){
         if c == ' ' {
