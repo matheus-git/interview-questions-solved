@@ -1,7 +1,6 @@
 mod arrays_and_search;
 
 fn main() {
-    
 }
 
 #[cfg(test)]
@@ -23,5 +22,15 @@ mod tests {
 
         assert_eq!(check_permutation::strings_have_identical_character_counts("listen", "silent"), true);
         assert_eq!(check_permutation::strings_have_identical_character_counts("apple", "aplee"), false);
+    }
+
+    #[test]
+    fn test_urlify() {
+        assert_eq!(urlify::urlify("Mr John Smith   "), "Mr%20John%20Smith");
+
+        let mut s: Vec<char> = "Mr John Smith    ".chars().collect();
+        urlify::urlify_in_place(&mut s, 13);
+        let s: String = s.into_iter().collect();
+        assert_eq!(s, "Mr%20John%20Smith");
     }
 }
