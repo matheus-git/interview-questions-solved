@@ -33,4 +33,10 @@ mod tests {
         let s: String = s.into_iter().collect();
         assert_eq!(s, "Mr%20John%20Smith");
     }
+
+    #[test]
+    fn test_palindrome_permutation() {
+        assert_eq!(palindrome_permutation::is_permutation_of_palindrome("Tact Coa"), true);
+        assert_eq!(palindrome_permutation::is_permutation_of_palindrome("hello"), false);
+    }
 }
