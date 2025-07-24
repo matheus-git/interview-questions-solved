@@ -39,4 +39,10 @@ mod tests {
         assert_eq!(palindrome_permutation::is_permutation_of_palindrome("Tact Coa"), true);
         assert_eq!(palindrome_permutation::is_permutation_of_palindrome("hello"), false);
     }
+
+    #[test]
+    fn test_one_away(){
+        assert_eq!(one_away::one_edit_away("pale","ple"), true);
+        assert_eq!(one_away::one_edit_away("pale","bae"), false);
+    }
 }
