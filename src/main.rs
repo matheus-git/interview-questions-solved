@@ -45,4 +45,10 @@ mod tests {
         assert_eq!(one_away::one_edit_away("pale","ple"), true);
         assert_eq!(one_away::one_edit_away("pale","bae"), false);
     }
+
+    #[test]
+    fn test_string_compression(){
+        assert_eq!(string_compression::compress("aabcccccaaa".to_string()), "a2b1c5a3".to_string());
+        assert_eq!(string_compression::compress("tomato".to_string()), "tomato".to_string());
+    }
 }
