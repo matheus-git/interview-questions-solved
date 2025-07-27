@@ -1,5 +1,6 @@
 mod arrays_and_search;
 mod stack_and_queues;
+mod bit_manipulation;
 
 fn main() {
 }
@@ -9,6 +10,7 @@ mod tests {
     use super::*;
     use arrays_and_search::*;
     use stack_and_queues::*;
+    use bit_manipulation::*;
 
     #[test]
     fn test_unique_chars() {
@@ -57,5 +59,16 @@ mod tests {
     #[test]
     fn test_sort_stack(){
         assert_eq!(sort_stack::sort_stack(vec![4,5,3,2,8,1]), vec![8,5,4,3,2,1]);
+    }
+
+    #[test]
+    fn test_insertion(){
+        let n = 0b10000000000;
+        let m = 0b10011;
+        let i = 2;
+        let j = 6;
+
+        let result = insertion::insert_bits(n, m, i, j);
+        assert_eq!(result, 0b10001001100);
     }
 }
