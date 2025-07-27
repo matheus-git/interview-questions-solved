@@ -1,4 +1,5 @@
 mod arrays_and_search;
+mod stack_and_queues;
 
 fn main() {
 }
@@ -7,6 +8,7 @@ fn main() {
 mod tests {
     use super::*;
     use arrays_and_search::*;
+    use stack_and_queues::*;
 
     #[test]
     fn test_unique_chars() {
@@ -50,5 +52,10 @@ mod tests {
     fn test_string_compression(){
         assert_eq!(string_compression::compress("aabcccccaaa".to_string()), "a2b1c5a3".to_string());
         assert_eq!(string_compression::compress("tomato".to_string()), "tomato".to_string());
+    }
+
+    #[test]
+    fn test_sort_stack(){
+        assert_eq!(sort_stack::sort_stack(vec![4,5,3,2,8,1]), vec![8,5,4,3,2,1]);
     }
 }
