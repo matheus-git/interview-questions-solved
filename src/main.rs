@@ -76,4 +76,9 @@ mod tests {
     fn test_binary_to_string(){
         assert_eq!(binary_to_string::binary_to_string(0.625), "0.101".to_string());
     }
+
+    #[test]
+    fn test_flip_bit_to_win(){
+        assert_eq!(flip_bit_to_win::flip_bit_to_win(1775), 8);
+    }
 }
