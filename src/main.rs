@@ -71,4 +71,9 @@ mod tests {
         let result = insertion::insert_bits(n, m, i, j);
         assert_eq!(result, 0b10001001100);
     }
+
+    #[test]
+    fn test_binary_to_string(){
+        assert_eq!(binary_to_string::binary_to_string(0.625), "0.101".to_string());
+    }
 }
