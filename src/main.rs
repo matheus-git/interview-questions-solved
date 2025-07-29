@@ -86,4 +86,9 @@ mod tests {
     fn test_bit_flips_needes(){
         assert_eq!(conversions::bit_flips_needed(29, 15), 2);
     }
+
+    #[test]
+    fn test_pairwise_swap(){
+        assert_eq!(pairwise_swap::pairwise_swap(178), 113);
+    }
 }   
