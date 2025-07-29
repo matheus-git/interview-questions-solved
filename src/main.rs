@@ -81,4 +81,9 @@ mod tests {
     fn test_flip_bit_to_win(){
         assert_eq!(flip_bit_to_win::flip_bit_to_win(1775), 8);
     }
-}
+
+    #[test]
+    fn test_bit_flips_needes(){
+        assert_eq!(conversions::bit_flips_needed(29, 15), 2);
+    }
+}   
