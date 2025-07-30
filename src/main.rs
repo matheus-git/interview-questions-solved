@@ -1,12 +1,15 @@
 mod arrays_and_search;
 mod stack_and_queues;
 mod bit_manipulation;
+mod recursion_and_dynamic;
 
 fn main() {
 }
 
 #[cfg(test)]
 mod tests {
+    use crate::recursion_and_dynamic::triple_step;
+
     use super::*;
     use arrays_and_search::*;
     use stack_and_queues::*;
@@ -90,5 +93,10 @@ mod tests {
     #[test]
     fn test_pairwise_swap(){
         assert_eq!(pairwise_swap::pairwise_swap(178), 113);
+    }
+
+    #[test]
+    fn test_triple_step(){
+        assert_eq!(triple_step::count_ways(10), 230);
     }
 }   
